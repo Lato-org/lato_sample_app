@@ -46,4 +46,4 @@ rails server
 
 8. Login to the Lato panel using the following credentials:
 - Email: `admin@mail.com`
-- Password: `password`
+- Password: `Password1!`
