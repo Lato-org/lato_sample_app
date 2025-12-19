@@ -1,0 +1,27 @@
+
+<% if @session.user&.lato_storage_admin %>
+  <%= lato_sidebar_nav_item :lato_storage, lato_storage.root_path do %>
+    <i class="bi bi-database me-2"></i>
+    Storage
+  <% end %>
+<% end %>
+
+
+<% if @session.user&.lato_settings_admin %>
+  <%= lato_sidebar_nav_item :lato_settings, lato_settings.root_path do %>
+    <i class="bi bi-gear me-2"></i>
+    Settings
+  <% end %>
+<% end %>
+
+<% if @session.user&.lato_spaces_admin %>
+  <%= lato_sidebar_nav_item :lato_spaces, lato_spaces.root_path do %>
+    <i class="bi bi-grid me-2"></i>
+    Spaces
+  <% end %>
+<% end %>
+
+<%= lato_sidebar_nav_item :github, 'https://github.com/Lato-org' do %>
+  <i class="bi bi-github me-2"></i>
+  Github
+<% end %>
