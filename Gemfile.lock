@@ -180,7 +180,7 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     language_server-protocol (3.17.0.5)
-    lato (3.19.1)
+    lato (3.19.3)
       bcrypt
       bootstrap
       browser
@@ -197,6 +197,9 @@ GEM
       lato
       rails (>= 7.1.1)
     lato_storage (3.1.2)
+      lato
+      rails (>= 7.1.1)
+    lato_users (3.0.0)
       lato
       rails (>= 7.1.1)
     lint_roller (1.1.0)
@@ -487,6 +490,7 @@ DEPENDENCIES
   lato_settings
   lato_spaces
   lato_storage
+  lato_users
   propshaft
   puma (>= 5.0)
   rails (~> 8.1.1)

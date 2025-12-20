@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   mount LatoStorage::Engine => "/lato-storage"
   mount LatoSettings::Engine => "/lato-settings"
   mount LatoSpaces::Engine => "/lato-spaces"
+  mount LatoUsers::Engine => "/lato-users"
 end

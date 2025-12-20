@@ -18,5 +18,6 @@ Lato::User.create!(
   accepted_terms_and_conditions_version: 1,
   lato_storage_admin: true,
   lato_settings_admin: true,
-  lato_spaces_admin: true
+  lato_spaces_admin: true,
+  lato_users_admin: true
 )

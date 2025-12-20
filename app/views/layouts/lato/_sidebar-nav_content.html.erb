@@ -21,6 +21,13 @@
   <% end %>
 <% end %>
 
+<% if @session.user&.lato_users_admin %>
+  <%= lato_sidebar_nav_item :lato_users, lato_users.root_path do %>
+    <i class="bi bi-people me-2"></i>
+    Users
+  <% end %>
+<% end %>
+
 <%= lato_sidebar_nav_item :github, 'https://github.com/Lato-org' do %>
   <i class="bi bi-github me-2"></i>
   Github
