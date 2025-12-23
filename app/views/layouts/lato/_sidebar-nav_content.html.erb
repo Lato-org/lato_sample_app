@@ -1,17 +1,6 @@
-
-<% if @session.user&.lato_storage_admin %>
-  <%= lato_sidebar_nav_item :lato_storage, lato_storage.root_path do %>
-    <i class="bi bi-database me-2"></i>
-    Storage
-  <% end %>
-<% end %>
-
-
-<% if @session.user&.lato_settings_admin %>
-  <%= lato_sidebar_nav_item :lato_settings, lato_settings.root_path do %>
-    <i class="bi bi-gear me-2"></i>
-    Settings
-  <% end %>
+<%= lato_sidebar_nav_item :dashboard, main_app.app_dashboard_path do %>
+  <i class="bi bi-speedometer2 me-2"></i>
+  Dashboard
 <% end %>
 
 <% if @session.user&.lato_spaces_admin %>
@@ -28,7 +17,16 @@
   <% end %>
 <% end %>
 
-<%= lato_sidebar_nav_item :github, 'https://github.com/Lato-org' do %>
-  <i class="bi bi-github me-2"></i>
-  Github
+<% if @session.user&.lato_storage_admin %>
+  <%= lato_sidebar_nav_item :lato_storage, lato_storage.root_path do %>
+    <i class="bi bi-database me-2"></i>
+    Storage
+  <% end %>
+<% end %>
+
+<% if @session.user&.lato_settings_admin %>
+  <%= lato_sidebar_nav_item :lato_settings, lato_settings.root_path do %>
+    <i class="bi bi-gear me-2"></i>
+    Settings
+  <% end %>
 <% end %>
