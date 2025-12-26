@@ -193,7 +193,7 @@ GEM
     lato_settings (3.0.6)
       lato
       rails (>= 7.1.1)
-    lato_spaces (3.1.23)
+    lato_spaces (3.1.24)
       lato
       rails (>= 7.1.1)
     lato_storage (3.1.2)
@@ -318,7 +318,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.1)
-    rdoc (7.0.2)
+    rdoc (7.0.3)
       erb
       psych (>= 4.0.0)
       tsort
