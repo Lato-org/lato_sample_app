@@ -8,13 +8,21 @@ The project has been created with:
 - Ruby version: 3.2.0
 - Rails version: 8.1.1
 
+## Download LLM context
+
+To download the LLM lato context, run the following command in your terminal:
+
+```bash
+rails llm:download_lato
+```
+
 ## Setup
 
 To set up the application, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone
+git clone https://github.com/Lato-org/lato_sample_app.git
 ```
 
 2. Navigate to the project directory:
