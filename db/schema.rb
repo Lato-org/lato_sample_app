@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_12_20_182053) do
+ActiveRecord::Schema[8.1].define(version: 2026_07_12_095963) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
@@ -37,6 +37,33 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_20_182053) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "lato_cms_page_fields", force: :cascade do |t|
+    t.string "component_id"
+    t.datetime "created_at", null: false
+    t.string "field_id"
+    t.integer "page_id", null: false
+    t.string "template_component_id"
+    t.string "template_id"
+    t.datetime "updated_at", null: false
+    t.text "value"
+    t.index ["page_id"], name: "index_lato_cms_page_fields_on_page_id"
+  end
+
+  create_table "lato_cms_pages", force: :cascade do |t|
+    t.json "component_states", default: {}, null: false
+    t.datetime "created_at", null: false
+    t.string "frontend_url"
+    t.string "locale", null: false
+    t.string "permalink", null: false
+    t.string "template_id"
+    t.string "title", null: false
+    t.string "translation_group_id"
+    t.datetime "updated_at", null: false
+    t.index ["locale"], name: "index_lato_cms_pages_on_locale"
+    t.index ["permalink"], name: "index_lato_cms_pages_on_permalink"
+    t.index ["translation_group_id"], name: "index_lato_cms_pages_on_translation_group_id"
   end
 
   create_table "lato_invitations", force: :cascade do |t|
@@ -133,6 +160,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_20_182053) do
     t.datetime "email_verified_at"
     t.string "first_name"
     t.string "last_name"
+    t.integer "lato_cms_admin_role", default: 0, null: false
     t.boolean "lato_settings_admin", default: false
     t.boolean "lato_spaces_admin", default: false
     t.boolean "lato_storage_admin", default: false
@@ -148,6 +176,7 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_20_182053) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "lato_cms_page_fields", "lato_cms_pages", column: "page_id"
   add_foreign_key "lato_invitations", "lato_users"
   add_foreign_key "lato_invitations", "lato_users", column: "inviter_lato_user_id"
   add_foreign_key "lato_log_user_signins", "lato_users"

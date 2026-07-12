@@ -49,6 +49,7 @@ gem "lato_storage"
 gem "lato_settings"
 gem "lato_spaces"
 gem "lato_users"
+gem "lato_cms"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

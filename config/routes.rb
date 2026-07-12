@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   mount LatoSettings::Engine => "/lato-settings"
   mount LatoSpaces::Engine => "/lato-spaces"
   mount LatoUsers::Engine => "/lato-users"
+  mount LatoCms::Engine => "/lato-cms"
 
   namespace :app do
     get "dashboard" => "dashboard#index", as: :dashboard

@@ -19,5 +19,6 @@ Lato::User.create!(
   lato_storage_admin: true,
   lato_settings_admin: true,
   lato_spaces_admin: true,
-  lato_users_admin: true
+  lato_users_admin: true,
+  lato_cms_admin_role: 2
 )

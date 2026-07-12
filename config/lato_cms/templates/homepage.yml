@@ -1,0 +1,6 @@
+id: homepage
+name: Homepage
+components:
+  hero_section:
+    component_id: hero
+    name: Hero Section

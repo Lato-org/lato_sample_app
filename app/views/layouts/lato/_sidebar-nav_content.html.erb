@@ -30,3 +30,10 @@
     Settings
   <% end %>
 <% end %>
+
+<% if (@session.user&.lato_cms_admin_role).to_i.positive? %>
+  <%= lato_sidebar_nav_item :lato_cms, lato_cms.root_path do %>
+    <i class="bi bi-file-earmark-text me-2"></i>
+    CMS
+  <% end %>
+<% end %>
