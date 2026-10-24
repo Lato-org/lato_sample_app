@@ -5,8 +5,8 @@ This project is a sample Rails application with all Lato engines integrated. It 
 ## Informations
 
 The project has been created with:
-- Ruby version: 3.2.0
-- Rails version: 8.1.1
+- Ruby version: 3.4.12
+- Rails version: 8.1.4
 
 ## Download LLM context
 
@@ -50,8 +50,14 @@ rails db:seed
 rails server
 ```
 
-7. Open your web browser and navigate to `http://localhost:3000` to access the application.
+7. Open `http://localhost:3000/lato` to access the Lato panel. The application home page at `/` is a separate sample page.
 
 8. Login to the Lato panel using the following credentials:
 - Email: `admin@mail.com`
 - Password: `Password1!`
+
+The sample app includes all Lato engines in this workspace: Lato, Users, Settings, Storage, Spaces, and CMS. Their mounts are `/lato`, `/lato-users`, `/lato-settings`, `/lato-storage`, `/lato-spaces`, and `/lato-cms`.
+
+## Security upgrade
+
+Use Ruby 3.4.12 and Rails 8.1.4. After updating Lato, run `rails lato:install:migrations` and `rails db:migrate` before deployment. Previous sessions are invalidated. Production requests require HTTPS. Active Storage image processing requires libvips 8.13 or newer.
